@@ -15,6 +15,10 @@
 
 /* SIDE BAR CORRECTIONs */
 
+.ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active {
+  background-color: transparent !important;
+}
+
 .ant-menu-light .ant-menu-item-selected {
   background-color: #399797 !important;
   color: #ffffff !important;
@@ -45,7 +49,6 @@
 
 /* ANTD TABLE  */
 
-/* Change background color with a transition effect */
 
 /* Default hover color */
 .default-hover-row:hover {
@@ -55,7 +58,7 @@
 }
 
 /* Special hover color for active rows */
-.ant-table-wrapper .ant-table-tbody > .ant-table-row > .ant-table-cell-row-hover {
+.ant-table-wrapper .ant-table-tbody>.ant-table-row>.ant-table-cell-row-hover {
   background-color: #f4f7fc !important;
   color: #004d55;
   /* Orange */
@@ -67,23 +70,20 @@
 /* SCROLL */
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 8px;
-  /* Thin scrollbar */
+  width: 8px; /* Sets the entire scrollbar width */
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-  /* Hide track */
+  background: transparent; /* Track background color */
+  border-radius: 4px; /* Optional: makes the track more rounded */
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #0d5257;
-  /* Dark green color */
+  background: #0d5257; /* Scrollbar color */
   border-radius: 10px;
-  /* Rounded scrollbar */
+  width: 4px; /* This won't work, but you can create a visual effect */
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #063c40;
-  /* Slightly darker on hover */
 }
