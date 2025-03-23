@@ -1,16 +1,13 @@
 import { COLOR_PRIMARY, COLOR_WHITE, DEEP_TEAL } from "@/constants/colors";
 import Image from "next/image";
 import Button from "../buttons";
-import { ChevronDown, Facebook, Instagram, Mail, MessageCircle, Phone } from "@deemlol/next-icons";
+import { ChevronDown, Facebook, Instagram } from "@deemlol/next-icons";
 import { SOCIAL_ICONS } from "@/constants/dummy-data/global-dummy-data";
 
 
-
-
-
-const UserSocialCard = ({ userName, userDetails }) => {
+const UserSocialCard = ({ userName, userDetails, userId }) => {
     return (
-        <div className="flex flex-col items-center w-[30%] bg-white  p-1.5 rounded-md shadow-md">
+        <div className="flex max-h-[460px] flex-col items-center bg-white  p-1.5 rounded-md">
             {/* PROFILE IMAGE */}
             <div className="w-40 h-40 rounded-full mt-4 overflow-hidden">
                 <Image
@@ -25,9 +22,9 @@ const UserSocialCard = ({ userName, userDetails }) => {
 
             {/* USER INFO */}
             <div className="flex gap-2 mt-2 mb-2 text-sm font-semibold">
-                <span>Mr. John Key</span>
+                <span>{userName}</span>
                 <span className="flex items-center border border-primary text-xxs rounded-md px-1 text-primary">
-                    121212
+                    {userId}
                 </span>
             </div>
 

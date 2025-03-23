@@ -19,7 +19,13 @@ const Table = ({
     rowKey = "key",
     pagination
 }: AntTableProps) => {
-    return <AntTable pagination={pagination} columns={columns} dataSource={data} loading={loading} rowKey={rowKey} />;
+    return <AntTable
+        pagination={pagination}
+        columns={columns}
+        dataSource={data}
+        loading={loading}
+        rowKey={rowKey}
+    />;
 };
 
 export default Table;

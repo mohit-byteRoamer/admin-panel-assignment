@@ -39,6 +39,51 @@
 
 /* LAYOUT CORRECTION */
 
-.ant-layout{
+.ant-layout {
   background-color: #ebf2f7 !important;
+}
+
+/* ANTD TABLE  */
+
+/* Change background color with a transition effect */
+
+/* Default hover color */
+.default-hover-row:hover {
+  background-color: rgba(173, 216, 230, 0.4) !important;
+  /* Light blue */
+  transition: background-color 0.3s ease-in-out !;
+}
+
+/* Special hover color for active rows */
+.ant-table-wrapper .ant-table-tbody > .ant-table-row > .ant-table-cell-row-hover {
+  background-color: #f4f7fc !important;
+  color: #004d55;
+  /* Orange */
+}
+
+
+
+
+/* SCROLL */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  /* Thin scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  /* Hide track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #0d5257;
+  /* Dark green color */
+  border-radius: 10px;
+  /* Rounded scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #063c40;
+  /* Slightly darker on hover */
 }
