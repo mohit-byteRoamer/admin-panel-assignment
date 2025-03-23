@@ -1,20 +1,35 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
-const config: Config = {
+const config = {
+  darkMode: ['class'],
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
+  prefix: '',
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        'primary': '#399797',
+        "primary-dark": "#004d53",
+        "primary-light": "#f4f7fc",
+        "mulberry-pink": "#c34d85",
+        "olive-green": "#afbb19",
+        "olive-green-light": "#eaefd9",
+        "deep-teal": "#004d55",
+        "deep-teal-light": "#b8d6d8",
+        'gray-light': '#f6f6f6',
+        'gray-light-dark': '#9A9A9A',
+        'gray-dim': '#f0f5f9',
+      },
+      fontSize: {
+        xxs: '0.7rem',
       },
     },
   },
   plugins: [],
-};
+} satisfies Config;
+
 export default config;

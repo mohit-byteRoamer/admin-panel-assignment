@@ -2,32 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* FOR HIDE SCROLL BAR */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* SIDE BAR CORRECTIONs */
+
+.ant-menu-light .ant-menu-item-selected {
+  background-color: #399797 !important;
+  color: #ffffff !important;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.ant-menu-title-content {
+  color: #ffffff !important;
+}
+
+.ant-menu .ant-menu-submenu-arrow::before {
+  background-color: #ffffff !important;
+
+}
+
+.ant-menu .ant-menu-submenu-arrow::after {
+  background-color: #ffffff !important;
+}
+
+.ant-layout-sider-children {
+  background-color: #4dafac !important;
+}
+
+/* LAYOUT CORRECTION */
+
+.ant-layout{
+  background-color: #ebf2f7 !important;
 }
