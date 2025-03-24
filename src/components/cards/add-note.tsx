@@ -23,7 +23,7 @@ const AddNote = () => {
                 <div className="py-1">
                     <div className="text-base"><span className="text-gray-500 text-base tracking-wide">EMMA:</span> 8/10/24 : Tue, 11:04 AM</div>
                     <div className="text-base"><span className="text-gray-500 text-base tracking-wide">Sent SMS:</span> Hi Mark, we sent you an introduction recently
-                        and we've not heard from you. Would you kindly give
+                        and we have not heard from you. Would you kindly give
                         me a call on 9017 8400? With love, Emma @Vital
                         partners</div>
                 </div>

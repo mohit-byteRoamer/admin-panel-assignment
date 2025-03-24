@@ -1,7 +1,7 @@
 "use client";
 
 import React, { forwardRef, useEffect } from "react";
-import { Button as AntdButton, ButtonProps, wave } from "antd";
+import { Button as AntdButton, ButtonProps } from "antd";
 
 interface CustomButtonProps extends Omit<ButtonProps, "color"> {
     className?: string;
@@ -9,9 +9,6 @@ interface CustomButtonProps extends Omit<ButtonProps, "color"> {
 
 const Button = forwardRef<HTMLButtonElement, CustomButtonProps>(
     ({ children, className, ...props }, ref) => {
-        useEffect(() => {
-            wave?.cancel?.(); // Disables the Ant Design wave effect
-        }, []);
 
         return (
             <AntdButton
