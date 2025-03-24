@@ -1,13 +1,18 @@
-import { COLOR_PRIMARY, COLOR_WHITE, DEEP_TEAL } from "@/constants/colors";
+import { DEEP_TEAL } from "@/constants/colors";
 import Image from "next/image";
 import Button from "../buttons";
 import { ChevronDown, Facebook, Instagram } from "@deemlol/next-icons";
-import { SOCIAL_ICONS } from "@/constants/dummy-data/global-dummy-data";
+import { SOCIAL_ICONS, UserDetail } from "@/constants/dummy-data/global-dummy-data";
 
+export interface USER_SOCIAL_CARD_PROPS_TYPES {
+    userName: string,
+    USER_DETAILS: any[],
+    userId: string
+}
 
-const UserSocialCard = ({ userName, userDetails, userId }) => {
+const UserSocialCard = ({ userName, USER_DETAILS, userId }: USER_SOCIAL_CARD_PROPS_TYPES) => {
     return (
-        <div className="flex max-h-[460px] flex-col items-center bg-white  p-1.5 rounded-md">
+        <div className="flex flex-col items-center bg-white  p-1.5 rounded-md">
             {/* PROFILE IMAGE */}
             <div className="w-40 h-40 rounded-full mt-4 overflow-hidden">
                 <Image
@@ -29,9 +34,9 @@ const UserSocialCard = ({ userName, userDetails, userId }) => {
             </div>
 
             {/* STATUS BUTTON */}
-            <Button bgColor={COLOR_PRIMARY} textColor={COLOR_WHITE}>
-                <div className="flex justify-between items-center gap-2">
-                    Active
+            <Button className="!bg-primary !border-none">
+                <div className="flex justify-between items-center gap-8">
+                    <span className="text-white !font-semibold" >Active</span>
                     <ChevronDown size={20} color="#FFFFFF" />
                 </div>
             </Button>
@@ -39,12 +44,12 @@ const UserSocialCard = ({ userName, userDetails, userId }) => {
             {/* SOCIAL ICONS */}
             <div className="flex mt-3 border rounded-lg border-dim">
                 {SOCIAL_ICONS.map(({ component: Icon, key }) => (
-                    <div key={key} className="px-4 p-1 border-r">
+                    <div key={key} className="px-5 p-2 border-r">
                         <Icon size={24} color={DEEP_TEAL} />
                     </div>
                 ))}
-                <div className="px-4 p-1">
-                    <Image alt="WhatsApp" width={24} height={24} src="/icons/whatsapp.png" priority />
+                <div className="px-4 p-1 flex items-center justify-center">
+                    <Image alt="WhatsApp" width={23} height={23} src="/icons/whatsapp.png" priority />
                 </div>
             </div>
 
@@ -61,7 +66,7 @@ const UserSocialCard = ({ userName, userDetails, userId }) => {
 
             {/* USER DETAILS */}
             <div className="w-full flex flex-col gap-2 px-4 pb-4">
-                {userDetails.map(({ label, value }) => (
+                {USER_DETAILS.map(({ label, value }: UserDetail) => (
                     <div key={label} className="w-full flex justify-between items-center">
                         <span className="text-gray-light-dark">{label}</span>
                         <span className="font-semibold">{value}</span>

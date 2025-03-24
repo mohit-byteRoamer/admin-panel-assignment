@@ -1,4 +1,7 @@
-const ScrollList = ({ list }) => {
+export interface SCROLL_LIST_PROPS_TYPE {
+    list: any[]
+}
+const ScrollList = ({ list }: SCROLL_LIST_PROPS_TYPE) => {
     return (
         <div className="bg-white h-[800px] overflow-x-hidden overflow-y-scroll flex flex-col p-4 rounded-lg w-full custom-scrollbar">
             {list.map((item, index) => (

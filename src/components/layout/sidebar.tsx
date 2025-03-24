@@ -1,22 +1,23 @@
 "use client";
-import React from "react";
-import { Menu } from "antd";
-import { MENU_ITEMS } from "@/constants/menuItems";
 
-const Sidebar = () => (
-    <>
-        <div style={{ height: 32, margin: 16, background: 'red' }} />
+import React, { useMemo } from "react";
+import { Menu } from "antd";
+import { usePathname } from "next/navigation";
+import { MENU_ITEMS } from "@/constants/menuItems";
+import { getMenuKeyByPath } from "@/utils/global-functions";
+
+const Sidebar = () => {
+    const pathname = usePathname();
+    const selectedKey = useMemo(() => getMenuKeyByPath(pathname), [pathname]);
+    return (
         <Menu
             theme="light"
-            defaultSelectedKeys={["5-1"]}
+            defaultSelectedKeys={selectedKey ? [selectedKey] : []}
             mode="inline"
             items={MENU_ITEMS}
-            style={{
-                backgroundColor: "#4dafac",
-                color: "#fff"
-            }}
+            className="!bg-primary !text-white !mt-16"
         />
-    </>
-);
+    );
+};
 
 export default Sidebar;

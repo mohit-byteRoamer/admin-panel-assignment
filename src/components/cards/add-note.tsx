@@ -1,7 +1,7 @@
 import { DEEP_TEAL } from "@/constants/colors"
 import { PlusCircle } from "@deemlol/next-icons"
 
-const AddNote = ({ }) => {
+const AddNote = () => {
     return (
         <div className="bg-white rounded-md">
             <div className="p-2 border-b flex justify-between px-3">

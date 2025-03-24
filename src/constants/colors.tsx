@@ -1,4 +1,4 @@
-export const COLOR_PRIMARY = "#399797"
+export const COLOR_PRIMARY = "#4dafac"
 export const COLOR_WHITE = "#ffffff"
 export const COLOR_BLACK = "#000000"
 export const COLOR_RED = "red"

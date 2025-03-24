@@ -1,7 +1,7 @@
-import { Mail, MessageCircle, Phone, X } from "@deemlol/next-icons";
+import { Mail, MessageCircle, Phone } from "@deemlol/next-icons";
+import { SAMPLE_DATA_TYPES, SOCIAL_ICONS_TYPES, USER_DETAILS_LIST_TYPES, USER_DETAILS_TYPES } from "../types";
 
-// TABLE DATA
-export const sampleData = [
+export const SAMPLE_DATA: SAMPLE_DATA_TYPES[] = [
     {
         key: "1",
         incompatibleFields: "23",
@@ -32,20 +32,20 @@ export const sampleData = [
     },
 ];
 
-export const SOCIAL_ICONS = [
+export const SOCIAL_ICONS: SOCIAL_ICONS_TYPES[] = [
     { component: Mail, key: "mail" },
     { component: MessageCircle, key: "message" },
     { component: Phone, key: "phone" },
 ];
 
-export const userDetails = [
+export const USER_DETAILS: USER_DETAILS_TYPES[] = [
     { label: "Age:", value: "30 to 35 Years" },
     { label: "Height:", value: "5 to 230 cms" },
     { label: "Suburb:", value: "Bondi" },
     { label: "Address:", value: "Sydney, Aus" },
 ];
 
-export const userDetailsList = [
+export const USER_DETAILS_LIST: USER_DETAILS_LIST_TYPES[] = [
     { label: "Suburb", value: "Bondi" },
     { label: "Occupation", value: "Account Manager" },
     { label: "Height", value: "165 cms" },

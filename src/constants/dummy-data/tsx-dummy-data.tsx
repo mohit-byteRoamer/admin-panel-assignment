@@ -2,9 +2,12 @@
 
 import { COLOR_MULBERRY_PINK } from "@/constants/colors";
 import { X } from "@deemlol/next-icons";
+import { COLUMNS_TYPES } from "../types";
 
 // TABLE DATA
-export const columns = [
+
+
+export const COLUMNS: COLUMNS_TYPES[] = [
     {
         title: "Incompatible Fields",
         dataIndex: "incompatibleFields",

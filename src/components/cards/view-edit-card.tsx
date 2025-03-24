@@ -1,7 +1,12 @@
 import { DEEP_TEAL } from "@/constants/colors"
 import { Edit2 } from "@deemlol/next-icons"
 
-const ViewEditCard = ({ isEdit, title }) => {
+export interface VIEW_EDIT_CARD_PROPS_TYPES {
+    title: string
+    isEdit?: boolean,
+}
+
+const ViewEditCard = ({ isEdit, title }: VIEW_EDIT_CARD_PROPS_TYPES) => {
     return (
         <div className="bg-white rounded-md">
             <div className="p-2 border-b flex justify-between px-3">

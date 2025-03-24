@@ -64,9 +64,6 @@
   /* Orange */
 }
 
-
-
-
 /* SCROLL */
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -86,4 +83,10 @@
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #063c40;
+}
+
+/* ANTD SWITCH */
+
+.ant-switch.ant-switch-checked {
+  background-color: #399797 !important;
 }
