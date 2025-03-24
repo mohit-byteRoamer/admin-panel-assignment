@@ -1,5 +1,5 @@
 import { COLOR_BLACK } from "@/constants/colors";
-import { getIcon } from "@/constants/icons";
+import { Bell, ChevronDown, MessageCircle } from "@deemlol/next-icons";
 import Image from "next/image";
 import React from "react";
 
@@ -20,8 +20,8 @@ const Header = () => {
                 </div>
             </div>
             <div className="flex gap-4 items-center">
-                {getIcon("Message", 24, COLOR_BLACK)}
-                {getIcon("Bell", 24, COLOR_BLACK)}
+                <MessageCircle size={24} color={COLOR_BLACK} />
+                <Bell size={24} color={COLOR_BLACK} />
                 <div className="w-10 h-10 border-2 border-slate-200 rounded-lg p-0.5">
                     <Image
                         alt="logo"
@@ -35,7 +35,7 @@ const Header = () => {
                 </div>
                 <div className="flex gap-2">
                     <div className="text-lg text-black font-medium">Robert Fox</div>
-                    {getIcon("ArrowDown", 24, COLOR_BLACK)}
+                    <ChevronDown size={24} color={COLOR_BLACK} />
                 </div>
             </div>
         </header>

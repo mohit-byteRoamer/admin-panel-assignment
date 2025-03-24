@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { getIcon } from './icons';
-import { ReactNode } from 'react';
 import { MENU_ITEM_TYPE } from './types';
+import { AirPlane, Folder, House, Layers, Mail, User, Users } from '@deemlol/next-icons';
+import { COLOR_WHITE } from './colors';
 
 
 export const ROUTES = {
@@ -67,16 +67,13 @@ export const PATH_KEYS = {
     NON_CONFORMANCE: "7-4",
 };
 
-
-
-
 export const MENU_ITEMS: MENU_ITEM_TYPE[] = [
-    { key: PATH_KEYS.DASHBOARD, icon: getIcon("Dashboard"), label: <Link href={ROUTES.DASHBOARD} >Dashboard </Link>, path: ROUTES.DASHBOARD },
-    { key: PATH_KEYS.MAILBOX, icon: getIcon("Mailbox"), label: <Link href={ROUTES.MAILBOX}>Mailbox</Link>, path: ROUTES.MAILBOX },
-    { key: PATH_KEYS.START_INTERVIEW, icon: getIcon("StartInterview"), label: <Link href={ROUTES.START_INTERVIEW}>Start Interview</Link>, path: ROUTES.START_INTERVIEW },
+    { key: PATH_KEYS.DASHBOARD, icon: <House size={18} color={COLOR_WHITE} />, label: <Link href={ROUTES.DASHBOARD} >Dashboard </Link>, path: ROUTES.DASHBOARD },
+    { key: PATH_KEYS.MAILBOX, icon: <Mail size={18} color={COLOR_WHITE} />, label: <Link href={ROUTES.MAILBOX}>Mailbox</Link>, path: ROUTES.MAILBOX },
+    { key: PATH_KEYS.START_INTERVIEW, icon: <Users size={18} color={COLOR_WHITE} />, label: <Link href={ROUTES.START_INTERVIEW}>Start Interview</Link>, path: ROUTES.START_INTERVIEW },
     {
         key: PATH_KEYS.TASK_MANAGER,
-        icon: getIcon("TaskManager"),
+        icon: <Layers size={18} color={COLOR_WHITE} />,
         label: "Task Manager",
         children: [
             { key: PATH_KEYS.OUTBOX, label: <Link href={ROUTES.OUTBOX}>Outbox</Link>, path: ROUTES.OUTBOX },
@@ -90,7 +87,7 @@ export const MENU_ITEMS: MENU_ITEM_TYPE[] = [
     },
     {
         key: PATH_KEYS.CAMPAIGN_MANAGEMENT,
-        icon: getIcon("CampaignManagement"),
+        icon: <AirPlane size={18} color={COLOR_WHITE} />,
         label: "Campaign Management",
         children: [
             { key: PATH_KEYS.TELEMARKETING, label: <Link href={ROUTES.TELEMARKETING}>Telemarketing</Link>, path: ROUTES.TELEMARKETING },
@@ -102,7 +99,7 @@ export const MENU_ITEMS: MENU_ITEM_TYPE[] = [
     },
     {
         key: PATH_KEYS.CLIENT_MANAGEMENT,
-        icon: getIcon("ClientManagement"),
+        icon: <User size={18} color={COLOR_WHITE} />,
         label: "Client Management",
         children: [
             { key: PATH_KEYS.VIEW_CLIENTS, label: <Link href={ROUTES.VIEW_CLIENTS}>View Clients</Link>, path: ROUTES.VIEW_CLIENTS },
@@ -113,7 +110,7 @@ export const MENU_ITEMS: MENU_ITEM_TYPE[] = [
     },
     {
         key: PATH_KEYS.UTILITIES,
-        icon: getIcon("Utilities"),
+        icon: <Folder size={18} color={COLOR_WHITE} />,
         label: "Utilities",
         children: [
             { key: PATH_KEYS.STORAGE, label: <Link href={ROUTES.STORAGE}>Storage</Link>, path: ROUTES.STORAGE },

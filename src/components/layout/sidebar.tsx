@@ -9,10 +9,12 @@ import { getMenuKeyByPath } from "@/utils/global-functions";
 const Sidebar = () => {
     const pathname = usePathname();
     const selectedKey = useMemo(() => getMenuKeyByPath(pathname), [pathname]);
+    
     return (
         <Menu
             theme="light"
             defaultSelectedKeys={selectedKey ? [selectedKey] : []}
+            key={selectedKey}
             mode="inline"
             items={MENU_ITEMS}
             className="!bg-primary !text-white !mt-16"
