@@ -1,10 +1,6 @@
 import { DEEP_TEAL } from "@/constants/colors"
 import { Edit2 } from "@deemlol/next-icons"
-
-export interface VIEW_EDIT_CARD_PROPS_TYPES {
-    title: string
-    isEdit?: boolean,
-}
+import { VIEW_EDIT_CARD_PROPS_TYPES } from "../types"
 
 const ViewEditCard = ({ isEdit, title }: VIEW_EDIT_CARD_PROPS_TYPES) => {
     return (

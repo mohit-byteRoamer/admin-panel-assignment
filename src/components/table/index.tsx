@@ -2,15 +2,7 @@
 
 import React from "react";
 import { Table as AntTable, } from "antd";
-import type { TableProps } from "antd";
-
-interface AntTableProps {
-    columns: TableProps["columns"];
-    data: any[];
-    loading?: boolean;
-    rowKey?: string;
-    pagination?: false | TableProps<any>["pagination"];
-}
+import { ANT_TABLE_PROPS_TYPES } from "../types";
 
 const Table = ({
     columns,
@@ -18,7 +10,7 @@ const Table = ({
     loading = false,
     rowKey = "key",
     pagination
-}: AntTableProps) => {
+}: ANT_TABLE_PROPS_TYPES) => {
     return <AntTable
         pagination={pagination}
         columns={columns}

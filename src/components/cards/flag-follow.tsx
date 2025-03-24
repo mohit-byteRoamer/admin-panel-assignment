@@ -5,10 +5,9 @@ import { Edit2, Flag } from "@deemlol/next-icons"
 import Button from "../buttons"
 import Switch from "../switch"
 import { useState } from "react"
+import { FLAG_FOLLOW_PROPS_TYPE } from "../types"
 
-export interface FLAG_FOLLOW_PROPS_TYPE {
-    title: string
-}
+
 
 const FlagFollow = ({ title }: FLAG_FOLLOW_PROPS_TYPE) => {
     const [toggle, setToggle] = useState(false)

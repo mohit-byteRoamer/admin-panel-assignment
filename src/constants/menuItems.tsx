@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import { getIcon } from './icons';
+import { ReactNode } from 'react';
+import { MENU_ITEM_TYPE } from './types';
+
 
 export const ROUTES = {
     DASHBOARD: "/",
@@ -30,7 +33,8 @@ export const ROUTES = {
     RECEIPTS_MANAGER: "/utilities/receiptsManager",
     ISSUES_MANAGEMENT: "/utilities/issuesManagement",
     NON_CONFORMANCE: "/utilities/nonConformance",
-};
+} as const;
+
 
 export const PATH_KEYS = {
     DASHBOARD: "1",
@@ -64,7 +68,9 @@ export const PATH_KEYS = {
 };
 
 
-export const MENU_ITEMS = [
+
+
+export const MENU_ITEMS: MENU_ITEM_TYPE[] = [
     { key: PATH_KEYS.DASHBOARD, icon: getIcon("Dashboard"), label: <Link href={ROUTES.DASHBOARD} >Dashboard </Link>, path: ROUTES.DASHBOARD },
     { key: PATH_KEYS.MAILBOX, icon: getIcon("Mailbox"), label: <Link href={ROUTES.MAILBOX}>Mailbox</Link>, path: ROUTES.MAILBOX },
     { key: PATH_KEYS.START_INTERVIEW, icon: getIcon("StartInterview"), label: <Link href={ROUTES.START_INTERVIEW}>Start Interview</Link>, path: ROUTES.START_INTERVIEW },

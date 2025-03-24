@@ -2,13 +2,11 @@ import { DEEP_TEAL } from "@/constants/colors";
 import Image from "next/image";
 import Button from "../buttons";
 import { ChevronDown, Facebook, Instagram } from "@deemlol/next-icons";
-import { SOCIAL_ICONS, UserDetail } from "@/constants/dummy-data/global-dummy-data";
+import { SOCIAL_ICONS } from "@/constants/dummy-data/global-dummy-data";
+import { USER_SOCIAL_CARD_PROPS_TYPES } from "../types";
+import { USER_DETAILS_TYPES } from "@/constants/types";
 
-export interface USER_SOCIAL_CARD_PROPS_TYPES {
-    userName: string,
-    USER_DETAILS: any[],
-    userId: string
-}
+
 
 const UserSocialCard = ({ userName, USER_DETAILS, userId }: USER_SOCIAL_CARD_PROPS_TYPES) => {
     return (
@@ -66,7 +64,7 @@ const UserSocialCard = ({ userName, USER_DETAILS, userId }: USER_SOCIAL_CARD_PRO
 
             {/* USER DETAILS */}
             <div className="w-full flex flex-col gap-2 px-4 pb-4">
-                {USER_DETAILS.map(({ label, value }: UserDetail) => (
+                {USER_DETAILS.map(({ label, value }: USER_DETAILS_TYPES) => (
                     <div key={label} className="w-full flex justify-between items-center">
                         <span className="text-gray-light-dark">{label}</span>
                         <span className="font-semibold">{value}</span>

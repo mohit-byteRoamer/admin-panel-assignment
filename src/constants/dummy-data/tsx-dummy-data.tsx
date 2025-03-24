@@ -4,15 +4,12 @@ import { COLOR_MULBERRY_PINK } from "@/constants/colors";
 import { X } from "@deemlol/next-icons";
 import { COLUMNS_TYPES } from "../types";
 
-// TABLE DATA
-
-
 export const COLUMNS: COLUMNS_TYPES[] = [
     {
         title: "Incompatible Fields",
         dataIndex: "incompatibleFields",
         key: "incompatibleFields",
-        render: (text, data) => (
+        render: (text: string, data: any) => (
             <div className="flex gap-2 items-center">
                 <X size={24} color={COLOR_MULBERRY_PINK} />
                 <div className={data.key == "4" ? "text-mulberry-pink" : ""}>

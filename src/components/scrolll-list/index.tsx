@@ -1,6 +1,5 @@
-export interface SCROLL_LIST_PROPS_TYPE {
-    list: any[]
-}
+import { SCROLL_LIST_PROPS_TYPE } from "../types";
+
 const ScrollList = ({ list }: SCROLL_LIST_PROPS_TYPE) => {
     return (
         <div className="bg-white h-[800px] overflow-x-hidden overflow-y-scroll flex flex-col p-4 rounded-lg w-full custom-scrollbar">

@@ -1,4 +1,5 @@
-export const appConstants = {
+
+export const APP_CONSTANTS = {
     TELEMARKETING: "Telemarketing",
     NO_ONE_YET_DES_SUCC: "No one yet described successfully",
     SEARCH_DATE: "Search date",
@@ -8,5 +9,4 @@ export const appConstants = {
     CONTACT_AFTER: "Contact After:",
     INTEREST: "Interest",
     MATCH_NOTES: "Match Notes"
-
 }
